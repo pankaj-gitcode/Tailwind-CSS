@@ -16,6 +16,8 @@ export default function App(){
       </div> */}
       <hr className='m-10 border-8 bg-red-800  border-green-900 border-l-yellow-800 border-l-8' />
 
+      <hr className="my-10 border-8 border-indigo-800 mx-auto w-96 border-dashed" />
+
       <div className='grid grid-cols-1 text-2xl font-bold text-center md:grid-cols-6'>
         <div className='bg-red-400 text-violet-800'>Box-1</div>
         <div className='bg-green-500'>Box-2</div>
