@@ -1,8 +1,9 @@
-import React, { Suspense, lazy } from 'react'
+// services routing path defined here
 
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
-import { useRecoilValue } from 'recoil';
-import { servicesAtom } from './Atom';
+import React, { Suspense, lazy } from 'react'
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+// import { useRecoilValue } from 'recoil';
+// import { servicesAtom } from './Atom';
 
 const Orders = lazy(()=>import('./Orders'));
 const Products = lazy(()=>import('./Products'));
@@ -17,8 +18,10 @@ export default function Services(){
 
             <BrowserRouter>
                     {/* <AllServices /> */}
+
+                    <Home />
                 <Routes>
-                    <Route path={'/'} element={<Temp />} />
+                    <Route path={'/'}  />
                     <Route path={'/products'} element={<Products/>}/>
                     <Route path={'/orders'} element={<Orders />}/>
                 </Routes>
@@ -49,10 +52,3 @@ export default function Services(){
 //     </>)
 // }
 
-const Temp = ()=>{
-    return(
-        <>
-            <div>This is temp</div>
-        </>
-    )
-}
